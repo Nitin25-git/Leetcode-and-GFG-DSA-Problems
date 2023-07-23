@@ -1,7 +1,8 @@
 class Solution {
     public int removeElement(int[] nums, int val) {
         int index=0;
-        for(int i=0;i<nums.length;i++)
+        int length=nums.length;
+        for(int i=0;i<length;i++)
         {
             if(nums[i]!=val)
             {
