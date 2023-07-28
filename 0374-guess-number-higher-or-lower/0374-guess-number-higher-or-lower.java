@@ -15,7 +15,7 @@ public class Solution extends GuessGame {
         
         while(low<=high)
         {
-            int mid=low+(high-low)/2;
+            int mid=low+(high-low)/2; // isse out of bound nhi jaata
             if(guess(mid)==0)
                 return mid;
             else if(guess(mid)==-1)
