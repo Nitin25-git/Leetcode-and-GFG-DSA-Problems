@@ -6,18 +6,24 @@ class Solution {
             if(map.containsKey(nums[i]))
             {
                 int of=map.get(nums[i]);
-              if(Math.abs(of-i)<=k)
-                  return true;
+                int nf=i;
+                if(Math.abs(nf-of)<=k)
+                    return true;
                 else
                     map.put(nums[i],i);
+                    
+                
             }
             else
             {
                 map.put(nums[i],i);
             }
+            
+            
+            
+            
         }
-       
-        
         return false;
+        
     }
 }
