@@ -12,7 +12,7 @@ class Solution {
             windowsum+=nums[i]-nums[i-k];
             maxsum=Math.max(maxsum,windowsum);
         }
-        return (double)(maxsum/k);
+        return (maxsum/k);
         
     }
 }
