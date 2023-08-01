@@ -3,7 +3,7 @@ class Solution {
     
         int start=0;
         int end=s.length-1;
-        char temp= Character.MIN_VALUE;
+        char temp;
         while(start<end)
         {
             temp=s[start];
