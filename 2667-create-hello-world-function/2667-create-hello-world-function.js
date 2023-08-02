@@ -1,3 +1,4 @@
-
-createHelloWorld = ()=>{ return ()=> "Hello World";}
-
+function createHelloWorld()
+{
+    return ()=>{ return "Hello World"}
+};
