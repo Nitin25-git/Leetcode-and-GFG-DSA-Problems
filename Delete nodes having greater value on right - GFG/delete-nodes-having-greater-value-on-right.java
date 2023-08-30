@@ -81,47 +81,25 @@ class Node {
 class Solution
 {
     Node compute(Node head)
-    
     {
-        if(head==null)
-         return head;
-       Node head1=reverse(head);
-       Node temp=null;
-       Node maxnode=head1;
-       Node current=head1;
-       while(current.next!=null)
-       {
-           if(current.next.data<maxnode.data)
-           {  temp=current.next;
-               current.next=temp.next;
-              
-           }
-           else
-           {
-               current=current.next;
-               maxnode=current;
-           }
-       }
-       return reverse(head1);
-       
-    }
-    
-    
-    
-    Node reverse(Node head)
-    {
-         Node prev=null;
-        Node current=head;
-        Node temp=null;
+     
+        if(head.next==null)return head;
         
-        while(current!=null)
+        int max=Integer.MAX_VALUE;
+        Node new_n=new Node(max);
+        
+        Stack<Node> stack=new Stack<Node>();
+        stack.push(new_n);
+        while(head!=null)
         {
-            temp=current.next;
-            current.next=prev;
-            prev=current;
-            current=temp;
+            while(stack.peek().data<head.data)
+            stack.pop();
+            
+            stack.peek().next=head;
+            stack.push(head);
+            head=head.next;
         }
-        return prev;
+        return new_n.next;
     }
+ 
 }
-  
