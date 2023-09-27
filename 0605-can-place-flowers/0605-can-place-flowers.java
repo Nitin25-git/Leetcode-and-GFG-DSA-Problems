@@ -9,6 +9,7 @@ class Solution {
             {
              pvs=(i==0)?0:flowerbed[i-1];
              next=(i==flowerbed.length-1)?0:flowerbed[i+1];
+            
             if(next==0 && pvs==0)
             {
                 flowerbed[i]=1;
