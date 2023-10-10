@@ -34,15 +34,6 @@ class Solution {
           //     return true;
     return fun2(arr,n-1);
     }
-
-    // static boolean fun(int[]a,int n){
-    //     if(n<=0) return true;
-    //     if(a[n]<a[n-1]) return false;
-    //     return fun(a,n-1);
-    // }
-    
-
-
     static boolean fun2(int[]a,int i){
         
         if(i<=0) return true;
