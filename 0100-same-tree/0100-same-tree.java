@@ -20,13 +20,16 @@ class Solution {
             return true;
         if(p==null || q==null)
             return false;
-        if(p.val!=q.val)
-            return false;
          
         boolean small1= isSameTree(p.left,q.left);
      boolean small2= isSameTree(p.right,q.right);
 
-         return small1 && small2;
+        if(small1 && small2)
+        {
+            if(p.val==q.val)
+                return true;
+        }
+        return false;
         
     }
 }
