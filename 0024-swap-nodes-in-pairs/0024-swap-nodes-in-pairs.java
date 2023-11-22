@@ -13,14 +13,12 @@ class Solution {
         if(head==null || head.next==null)
             return head;
         
-        ListNode first=head;
-        ListNode second=head.next;
+        ListNode head1=head.next;
+        ListNode temp=swapPairs(head1.next);
+        head1.next=head;
+        head.next=temp;
         
-        first.next=swapPairs(second.next);
-        second.next=first;
-        
-        
-        return second;
+        return head1;
         
     }
 }
