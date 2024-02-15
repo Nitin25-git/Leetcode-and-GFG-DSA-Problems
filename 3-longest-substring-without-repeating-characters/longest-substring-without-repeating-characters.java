@@ -11,8 +11,7 @@ class Solution {
             char currentChar = s.charAt(i);
 
             if (map.containsKey(currentChar)) {
-                // Update start to the next index after the previous occurrence of the repeating character
-                start = Math.max(map.get(currentChar) + 1, start);
+                start = Math.max(map.get(currentChar) + 1,start);
             }
 
             map.put(currentChar, i);
