@@ -14,12 +14,13 @@ class Solution {
         if(head==null || head.next==null)
             return head;
         
-        ListNode tail1=head.next;
-        ListNode head1=reverseList(head.next);
-        tail1.next=head;
+        ListNode seclast=head.next;
+        ListNode rev=reverseList(head.next);
+        
+        seclast.next=head;
         head.next=null;
         
-        return head1;
+        return rev;
         
     }
 }
