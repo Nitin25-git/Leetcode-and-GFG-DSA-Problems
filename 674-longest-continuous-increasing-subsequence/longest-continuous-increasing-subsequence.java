@@ -16,7 +16,6 @@ class Solution {
             if(nums[i]<nums[i+1])
             {
                 c++;
-                max=Math.max(c,max);
 
             }
             else
@@ -24,6 +23,8 @@ class Solution {
                 c=1;
                 
             }
+             max=Math.max(c,max);
+
 
                 
         }
